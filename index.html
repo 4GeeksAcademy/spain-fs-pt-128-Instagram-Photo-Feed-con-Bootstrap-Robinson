@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Photo Feed con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-instagram"></i> Instagram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex" role="search">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success mx-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create new post
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h6>Caption:</h6>
+                                    <textarea class="form-control" rows="2"
+                                        placeholder="Add the caption of your post here"></textarea>
+                                </div>
+                                <span class="input-group-img p-3">
+                                    <button type="button" class="btn btn-ligth border-dark-subtle"><i
+                                            class="fa-solid fa-camera"></i></button>
+                                    <button type="button" class="btn btn-ligth border-dark-subtle"><i
+                                            class="fa-solid fa-location-dot"></i></button>
+                                </span>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- ***FINALIZA NAV TAB *** -->
+    <div class="container mt-4">
+        <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                        class="fa-solid fa-table-cells"></i></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                        class="fa-solid fa-square"></i></i></button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Por un 2026 lleno de viajes.jpeg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Santorini.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Playas Bonitas.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Comida Tipica De Mexico.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/basket ball sport.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Fotografias De Perros.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Laponia.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Reunion famíliar.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-2">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Couples.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                tabindex="0">
+                <!-- AQUI VA EL CONTENIDO DEL SEGUNDO TAB -->
+                <div class="row">
+                    <div class="card col-lg-6 col-md-10 d-flex justify-content-between  mx-auto p-2 m-2">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5>My Fisrt Post</h5>
+                            <p>11/23</p>
+                        </div>
+                        <div class="body" style="width: 100;">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Por un 2026 lleno de viajes.jpeg"
+                                alt="">
+                        </div>
+                        <div class="card-footer">
+                            <p><strong>1959 Likes</strong></p>
+                            <p class="card-text"> Por un 2026 lleno de viajes ✈️ <br>
+                                <strong>#travel #2026 #viajes</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-lg-6 col-md-10 d-flex justify-content-between  mx-auto p-2 m-2">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5>Santorini</h5>
+                            <p>11/23</p>
+                        </div>
+                        <div class="body" style="width: 100;">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Santorini.jpg" alt="">
+                        </div>
+                        <div class="card-footer">
+                            <p><strong>1972 Likes</strong></p>
+                            <p class="card-text"> Santorini: una postal de ensueño en blanco y azul 💙🇬🇷.<br>
+                                <strong>#travel #2025 #viajes #💙 </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-lg-6 col-md-10 d-flex justify-content-between  mx-auto p-2 m-2">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5>Playas Bonitas</h5>
+                            <p>11/23</p>
+                        </div>
+                        <div class="body" style="width: 100;">
+                            <img class="w-100 h-100 object-fit-cover" src="/Img/Playas Bonitas.jpeg" alt="">
+                        </div>
+                        <div class="card-footer">
+                            <p><strong>1991 Likes</strong></p>
+                            <p class="card-text"> Mi lugar favorito en el mundo 🌊 🏖️.<br>
+                                <strong>#travel #2025 #Playa </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+                integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+                crossorigin="anonymous"></script>
+        </div>
+    </div>
+</body>
+
+</html>
